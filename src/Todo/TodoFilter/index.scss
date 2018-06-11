@@ -1,0 +1,20 @@
+.wrapper {
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  color: #83AFE5;
+  transition: color 1s linear;
+  .left {
+    flex: 1 0 300px;
+    padding-left: 40px;
+  }
+  .filter {
+    flex: 1 0 auto;
+    text-align: center;
+  }
+  .active {
+    color: #127bd2;
+    transition: color 1s linear;
+  }
+}

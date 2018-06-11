@@ -1,0 +1,23 @@
+.wrapper {
+  width: 680px;
+  margin: 200px auto 0;
+
+  :global {
+    .ant-input {
+      color: #DF8C8C;
+      font-family: 'Poiret One', Microsoft Jhenghei;
+      &::-webkit-input-placeholder{
+        color: #DF8C8C;
+      }
+      &:-moz-placeholder{
+        color: #DF8C8C;
+      }
+      &::-moz-placeholder{
+        color: #DF8C8C;
+      }
+      &:-ms-input-placeholder{
+        color: #DF8C8C;
+      }
+    }
+  }
+}

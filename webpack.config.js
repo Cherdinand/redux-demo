@@ -23,16 +23,15 @@ module.exports = {
     },
     publicPath: "/assets/",
     host: "0.0.0.0",
-    port: 8888,
+    port: 8887,
     hot: true,
     // contentBase: path.resolve(__dirname, 'dist/assets'), // 会在设置的目录下创建本地服务器，然后使用目录下的index.html文件
   },
   
   resolve: {
     alias: {
-      common: path.resolve(__dirname, 'common'),
-      components: path.resolve(__dirname, 'src/components'),
-      router: path.resolve(__dirname, 'src/router'),
+      src: path.resolve(__dirname, 'src'),
+      utils: path.resolve(__dirname, 'utils'),
     },
     
     extensions: [".js", ".json", ".jsx", ".css"],
