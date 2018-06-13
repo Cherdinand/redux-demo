@@ -25,7 +25,15 @@ export default class Todo extends Component {
   
   addItem = (e) => {
     const value = e.target.value.trim();
-    value ? this.props.actions.addItem(value) : message.warning("输入不能为空", 1)
+    const { todoList } = this.props.TodoReducer;
+    if(value){
+      if(!todoList.some(todoItem => todoItem.value === value)){
+        this.props.actions.addItem(value);
+        this.Input.input.value = "";
+      }
+    } else {
+      message.warning("输入不能为空", 1);
+    }
   };
   
   toggleAll = () => {
@@ -44,12 +52,23 @@ export default class Todo extends Component {
     this.setState({ filter })
   };
   
+  sendPromiseAction = () => {
+    this.props.actions.promiseAction();
+  };
+  
   render() {
     const { todoList } = this.props.TodoReducer;
     
     return (
       <div className={styles.wrapper}>
+        <div className={styles.btnWrapper}>
+          <button className={styles.btn} onClick={this.sendPromiseAction}>
+            Just test customize middleware
+          </button>
+        </div>
+        
         <Input
+          ref={ele => this.Input = ele}
           size="large"
           placeholder="please input todo"
           onPressEnter={this.addItem}

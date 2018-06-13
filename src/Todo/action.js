@@ -35,3 +35,10 @@ export const toggleAll = (checked) => {
     payload: { checked }
   }
 }
+
+export const promiseAction = () => {
+  return {
+    promise: Promise.resolve("xinxin"),
+    types: ["PromisePending","PromiseResolved","PromiseRejected"]
+  }
+}

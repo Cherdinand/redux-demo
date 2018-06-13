@@ -1,7 +1,6 @@
 .wrapper {
   width: 680px;
   margin: 200px auto 0;
-
   :global {
     .ant-input {
       color: #DF8C8C;
@@ -19,5 +18,13 @@
         color: #DF8C8C;
       }
     }
+  }
+}
+
+.btnWrapper {
+  text-align: center;
+  .btn {
+    font-size: 16px;
+    margin-bottom: 20px;
   }
 }
