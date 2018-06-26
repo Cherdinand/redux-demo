@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import styles from './index.scss';
 
-const navs = ["todo"];
+const navs = ["todo","dnd"];
+
 export default class Home extends Component {
   render() {
     return (
@@ -10,7 +11,7 @@ export default class Home extends Component {
         {
           navs.map(nav => {
             return (
-              <Link key={nav} to={nav}>{nav}</Link>
+              <p key={nav}><Link to={nav}>{nav}</Link></p>
             )
           })
         }
