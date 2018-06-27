@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 import store from '../store';
 
 import Todo from "src/Todo";
-import ReactDnd from "src/ReactDnd";
 import Home from "src/Home";
 
 import styles from './index.scss';
@@ -20,7 +19,6 @@ export default class App extends Component {
           <BrowserRouter>
             <Switch>
               <Route path="/todo" component={Todo}/>
-              <Route path="/dnd" component={ReactDnd}/>
               <Route path="/" component={Home}/>
             </Switch>
           </BrowserRouter>
